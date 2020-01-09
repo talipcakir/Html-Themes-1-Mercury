@@ -2,9 +2,15 @@
 <html lang="tr">
 
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!-- style include START -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel='stylesheet' id="fontawesome-css" href="https://use.fontawesome.com/releases/v5.0.1/css/all.css?ver=4.9.1'
+    type='text/css" media="all" />
   <link rel="stylesheet" href="css/myStyle.css">
+  <!-- style include END -->
+  <!-- script include START -->
   <script src="https://kit.fontawesome.com/62f27a7564.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -16,6 +22,9 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
   <script src="js/myJS.js"></script>
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script><!-- canvasjs chart -->
+  <script src="js/chartJS.js"></script><!-- chart data -->
+  <!-- script include END -->
 </head>
 
 <body class="bodyBack" onload="startControl()">
@@ -32,7 +41,7 @@
   <header id="head-LR">
     <div class="d-flex">
       <!--left menu open close button START-->
-      <div class="p-2 flex-grow-1">
+      <div class="p-2 flex-grow-1 bg-color-white max-height76">
         <div id="openNavB">
           <span class="cursorPointer" onclick="openNav()">&#9776;</span>
         </div>
@@ -41,7 +50,7 @@
         </div>
       </div>
       <!--left menu open close button END-->
-      <div class="p-2">
+      <div class="p-2 bg-color-white max-height76">
         <ul class="nav justify-content-end">
           <li class="nav-item">
             <!--messages drop START-->
@@ -104,7 +113,7 @@
           </li>
         </ul>
       </div>
-      <div class="p-2">
+      <div class="p-2 bg-color-white max-height76">
         <!-- userpanel START -->
         <div class="dropdown">
           <button type="button" class="btn  bg-color-white" data-toggle="dropdown">
@@ -167,6 +176,11 @@
   </div>
   <!--left side bar END-->
   <div id="main-LR">
+    <header class="mt-4 mb-3">
+      <div>
+        <span class="fontRoboto text-size-24px ml-4 left-right-Arrow">January 2020</span>
+      </div>
+    </header>
     <table class="table table-bordered bg-color-white container">
       <thead>
         <tr>
@@ -199,8 +213,7 @@
           <td>8</td>
           <td>9
             <footer>
-              <img src="img/user4.jpeg" alt="User Four" width="30">
-              Meeting with User Four
+              <div class="calenderTasks">Meeting User Four</div>
             </footer>
           </td>
           <td>10</td>
@@ -211,7 +224,26 @@
           <td>13</td>
           <td>14
             <footer>
-              <span class="calenderTasksRed">Team Meeting</span>
+              <a href="#" data-toggle="dropdown">
+                <span class="calenderTasksRed">Team Meeting</span>
+              </a>
+              <div class="dropdown-menu myDropdown-content">
+                <div class="card bg-color-white" style="width: 18rem;">
+                  <div class="card-header">
+                    <span class="text-muted text-size-14">AUTHOR:</span>
+                    <div class="row">
+                      <img class="float-left" src="img/user4.jpeg" alt="User Four" width="30">
+                      <h6>User Four</h6>
+                      <footer class="text-muted">Account Manager</footer>
+                    </div>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                  </ul>
+                </div>
+              </div>
             </footer>
           </td>
           <td>15</td>

@@ -12,6 +12,17 @@
   font-family: 'Roboto', sans-serif;
 }
 
+.fontRobotoMedium {
+  font-family: 'Roboto', sans-serif;
+  font-weight: medium;
+  color: #0e1a35;
+}
+
+.messageActive {
+  background-color: #dadee7;
+  font-family: 'Roboto';
+}
+
 .text-size-20px {
   font-size: 20px;
 }
@@ -27,9 +38,34 @@ tr>th {
   font-family: 'Roboto', sans-serif;
 }
 
+h3 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
 h4 {
   font-size: 20px;
-  color: #8492af;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 1vw;
+}
+
+.text-size-24px {
+  font-size: 24px;
+}
+
+.text-size-20px {
+  font-size: 20px;
+}
+
+.text-size-14 {
+  font-size: 14px;
+}
+
+.boldFont {
+  font-weight: bold;
 }
 
 /* box inside footer */
@@ -53,8 +89,8 @@ div>footer {
   src: url(https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap);
 }
 
-.bg-white-color {
-  background-color: #dddddd;
+.bg-color-white {
+  background-color: white;
 }
 
 .bg-darkblue {
@@ -72,11 +108,19 @@ div>footer {
 }
 
 .min-w-200px {
-  min-width: 200px;
+  min-width: 200px!important;
+}
+
+.min-w-230px {
+  min-width: 230px!important;
 }
 
 .min-height146 {
   min-height: 146px;
+}
+
+.max-height76 {
+  max-height: 76px;
 }
 
 /* calender costum */
@@ -90,7 +134,7 @@ div>footer {
   border-left-width: 4px;
   border-left-style: solid;
   background-color: #e8e9ec;
-  min-width: 6px;
+  min-height: 25px;
 }
 
 .calenderTasksRed {
@@ -98,20 +142,76 @@ div>footer {
   border-left-width: 4px;
   border-left-style: solid;
   background-color: #e8e9ec;
-  min-width: 6px;
+  min-height: 25px;
+}
+
+/* main donut to left list */
+
+ul.yourSalesList {
+  list-style: none;
+  /* first list mark delete */
+}
+
+ul.yourSalesList li::before {
+  content: "\2022";
+  /* after list mark before add dot */
+  color: blue;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
 }
 
 /* chart btn*/
 
 .setChartBtn {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
-  min-width: 128px;
-  border: 0px;
+  min-width: 150px;
   border-radius: 24px;
+  border: 1px solid rgba(132, 146, 175, 0.3);
   background-color: #ff3a76;
+  background-color: white;
   font-family: 'Roboto';
   font-size: 12px!important;
+}
+
+.setChartBtn::after {
+  margin-left: 2px;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f0dd";
+}
+
+.left-right-Arrow::after {
+  margin-left: 6px;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f0da";
+  font-size: 16px;
+}
+
+.left-right-Arrow::before {
+  margin-right: 6px;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f0d9";
+  font-size: 16px;
 }
 
 .no-border {
@@ -293,8 +393,21 @@ div>footer {
 }
 
 .cursorPointer {
-  font-size: 30px;
+  font-size: 22px;
   cursor: pointer;
+}
+
+.cursorPointer::before {
+  margin-right: 2px;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  content: "\f0d9";
+  font-size: 12px;
 }
 
 /* login+register page config */
@@ -330,9 +443,11 @@ div>footer {
   border-color: gray;
   border-width: 1px;
 }
-.loginBack-G{
+
+.loginBack-G {
   background-image: url(../img/bg.jpeg);
 }
-.btn-pillM{
+
+.btn-pillM {
   border-radius: 24px;
 }

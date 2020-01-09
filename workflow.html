@@ -2,9 +2,15 @@
 <html lang="tr">
 
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!-- style include START -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel='stylesheet' id="fontawesome-css" href="https://use.fontawesome.com/releases/v5.0.1/css/all.css?ver=4.9.1'
+    type='text/css" media="all" />
   <link rel="stylesheet" href="css/myStyle.css">
+  <!-- style include END -->
+  <!-- script include START -->
   <script src="https://kit.fontawesome.com/62f27a7564.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -16,9 +22,12 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
   <script src="js/myJS.js"></script>
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script><!-- canvasjs chart -->
+  <script src="js/chartJS.js"></script><!-- chart data -->
+  <!-- script include END -->
 </head>
 
-<body class="bodyBack"  onload="startControl()">
+<body class="bodyBack" onload="startControl()">
   <!-- top navbar header START-->
   <!--media max 767px logo set down/up START-->
   <span class="w-100 d-block logo-mini bg-darkblue text-center">
@@ -32,7 +41,7 @@
   <header id="head-LR">
     <div class="d-flex">
       <!--left menu open close button START-->
-      <div class="p-2 flex-grow-1">
+      <div class="p-2 flex-grow-1 bg-color-white max-height76">
         <div id="openNavB">
           <span class="cursorPointer" onclick="openNav()">&#9776;</span>
         </div>
@@ -41,7 +50,7 @@
         </div>
       </div>
       <!--left menu open close button END-->
-      <div class="p-2">
+      <div class="p-2 bg-color-white max-height76">
         <ul class="nav justify-content-end">
           <li class="nav-item">
             <!--messages drop START-->
@@ -104,7 +113,7 @@
           </li>
         </ul>
       </div>
-      <div class="p-2">
+      <div class="p-2 bg-color-white max-height76">
         <!-- userpanel START -->
         <div class="dropdown">
           <button type="button" class="btn  bg-color-white" data-toggle="dropdown">
@@ -174,7 +183,7 @@
               <thead>
                   <tr class="row">
                       <th class="col-10">
-                          <span class="fontRoboto text-size-24px">To Do</span>
+                          <span class="fontRoboto text-size-20px">To Do</span>
                           <span class="text-muted"> (6)</span>
                       </th>
                       <th class="col-1">
@@ -183,7 +192,7 @@
                   </tr>
               </thead>
               <tbody>
-                  <tr class="row bg-color-white margin-top-1rem">
+                  <tr class="row bg-color-white mt-2">
                       <td class="col-sm-2 col-2 av-mid">
                           <button class="btn-primary numberCircle">N</button>
                       </td>
@@ -198,7 +207,7 @@
                           <i class="fa fa-ellipsis-v fa-lg float-right"></i>
                       </td>
                   </tr>
-                  <tr class="row bg-color-white av-mid  margin-top-1rem">
+                  <tr class="row bg-color-white av-mid  mt-2">
                       <td class="col-sm-2 col-2 av-mid">
                           <button class="btn-primary numberCircle float-left">F</button>
                       </td>
@@ -213,7 +222,7 @@
                           <i class="fa fa-ellipsis-v fa-lg float-right"></i>
                       </td>
                   </tr>
-                  <tr class="row bg-color-white av-mid margin-top-1rem">
+                  <tr class="row bg-color-white av-mid mt-2">
                       <td class="col-sm-2 col-2 av-mid">
                           <button class="btn-primary numberCircle float-left">N</button>
                       </td>
@@ -228,7 +237,7 @@
                           <i class="fa fa-ellipsis-v fa-lg float-right"></i>
                       </td>
                   </tr>
-                  <tr class="row bg-color-white av-mid margin-top-1rem">
+                  <tr class="row bg-color-white av-mid mt-2">
                       <td class="col-sm-2 col-2 av-mid">
                           <button class="btn-primary numberCircle float-left">N</button>
                       </td>
@@ -243,7 +252,7 @@
                           <i class="fa fa-ellipsis-v fa-lg float-right"></i>
                       </td>
                   </tr>
-                  <tr class="row bg-color-white av-mid margin-top-1rem">
+                  <tr class="row bg-color-white av-mid mt-2">
                       <td class="col-sm-2 col-2 av-mid">
                           <button class="btn-primary numberCircle float-left">F</button>
                       </td>
@@ -258,7 +267,7 @@
                           <i class="fa fa-ellipsis-v fa-lg float-right"></i>
                       </td>
                   </tr>
-                  <tr class="row bg-color-white margin-top-1rem">
+                  <tr class="row bg-color-white mt-2">
                       <td class="col-sm-2 col-2 av-mid">
                           <button class="btn-primary numberCircle">I</button>
                       </td>
@@ -283,7 +292,7 @@
               <thead>
                   <tr class="row">
                       <th class="col">
-                          <span class="fontRoboto text-size-24px">
+                          <span class="fontRoboto text-size-20px">
                               In Progress
                           </span>
                           <span class="text-muted"> (3)</span>
@@ -291,7 +300,7 @@
                   </tr>
               </thead>
               <tbody>
-                  <tr class="row bg-color-white av-mid margin-top-1rem">
+                  <tr class="row bg-color-white av-mid mt-2">
                       <td class="col-sm-2 col-2 av-mid">
                           <button class="btn-primary numberCircle float-left">N</button>
                       </td>
@@ -306,7 +315,7 @@
                           <i class="fa fa-ellipsis-v fa-lg float-right"></i>
                       </td>
                   </tr>
-                  <tr class="row bg-color-white av-mid margin-top-1rem">
+                  <tr class="row bg-color-white av-mid mt-2">
                       <td class="col-sm-2 col-2 av-mid">
                           <button class="btn-primary numberCircle float-left">D</button>
                       </td>
@@ -321,7 +330,7 @@
                           <i class="fa fa-ellipsis-v fa-lg float-right"></i>
                       </td>
                   </tr>
-                  <tr class="row bg-color-white av-mid margin-top-1rem">
+                  <tr class="row bg-color-white av-mid mt-2">
                       <td class="col-sm-2 col-2 av-mid">
                           <button class="btn-primary numberCircle float-left">B</button>
                       </td>
@@ -345,9 +354,9 @@
       <div class="col min-w-200px">
           <table class="table">
               <thead>
-                  <tr>
+                  <tr class="mt-2">
                       <th>
-                          <span class="fontRoboto text-size-24px">
+                          <span class="fontRoboto text-size-20px">
                               Completed
                           </span>
                           <span class="text-muted"> (4)</span>
@@ -355,7 +364,7 @@
                   </tr>
               </thead>
               <tbody>
-                  <tr class="row bg-color-white av-mid margin-top-1rem">
+                  <tr class="row bg-color-white av-mid mt-2">
                       <td class="col-sm-2 col-2 av-mid">
                           <button class="btn-primary numberCircle float-left">F</button>
                       </td>
@@ -371,7 +380,7 @@
                           <i class="fa fa-ellipsis-v fa-lg float-right"></i>
                       </td>
                   </tr>
-                  <tr class="row bg-color-white av-mid margin-top-1rem">
+                  <tr class="row bg-color-white av-mid mt-2">
                       <td class="col-sm-2 col-2 av-mid">
                           <button class="btn-primary numberCircle float-left">I</button>
                       </td>
@@ -387,7 +396,7 @@
                           <i class="fa fa-ellipsis-v fa-lg float-right"></i>
                       </td>
                   </tr>
-                  <tr class="row bg-color-white av-mid margin-top-1rem">
+                  <tr class="row bg-color-white av-mid mt-2">
                       <td class="col-sm-2 col-2 av-mid">
                           <button class="btn-primary numberCircle float-left">N</button>
                       </td>
@@ -403,7 +412,7 @@
                           <i class="fa fa-ellipsis-v fa-lg float-right"></i>
                       </td>
                   </tr>
-                  <tr class="row bg-color-white av-mid margin-top-1rem">
+                  <tr class="row bg-color-white av-mid mt-2">
                       <td class="col-sm-2 col-2 av-mid">
                           <button class="btn-primary numberCircle float-left">I</button>
                       </td>
