@@ -446,6 +446,7 @@ ul.yourSalesList li::before {
 
 .loginBack-G {
   background-image: url(../img/bg.jpeg);
+  background-repeat: no-repeat;
 }
 
 .btn-pillM {
